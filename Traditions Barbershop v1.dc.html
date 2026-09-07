@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Traditions Barbershop — Barber Shop in Historic Downtown Sanford, FL</title>
+<meta name="description" content="Traditions Barbershop is a barber shop in historic downtown Sanford, Florida. Classic barbering, clean cuts, professional grooming. 210 Sanford Ave. Walk-ins welcome, appointments preferred." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{margin:0;background:#F5F1EA;color:#17150F;font-family:'Archivo',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:#6E442C;text-decoration:none}
+  a:hover{color:#17150F}
+  a:focus-visible,button:focus-visible{outline:1px solid #6E442C;outline-offset:6px}
+  h1,h2,h3{margin:0;font-weight:400}
+  p{text-wrap:pretty}
+  @keyframes tb-fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BarberShop","name":"Traditions Barbershop","address":{"@type":"PostalAddress","streetAddress":"210 Sanford Ave","addressLocality":"Sanford","addressRegion":"FL","postalCode":"32771","addressCountry":"US"},"telephone":"+1-321-578-0090","email":"traditionsbarbershopsanford@gmail.com","foundingDate":"2017","priceRange":"$$","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}],"sameAs":["https://www.instagram.com/traditionsbarbershopsanford/","https://www.facebook.com/p/Traditions-Barbershop-100054428742990/"],"potentialAction":{"@type":"ReserveAction","target":{"@type":"EntryPoint","urlTemplate":"https://booksy.com/en-us/60231_traditions-barbershop_barber-shop_16063_sanford#ba_s=seo"}}}
+</script>
+</helmet>
+
+<header ref="{{ headerRef }}" style="position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:clamp(18px,2.6vw,34px) clamp(20px,4vw,56px);transition:background 500ms ease,padding 400ms ease;backdrop-filter:blur(6px)">
+  <a href="#top" aria-label="Traditions Barbershop — home" style="display:block;flex:0 0 auto">
+    <img src="uploads/Ivory%20traditions-logo-softwhite-5000.png" alt="Traditions Barbershop logo" style="height:clamp(42px,4.6vw,64px);width:auto" />
+  </a>
+  <button type="button" aria-label="Open menu" aria-expanded="false" onClick="{{ openMenu }}" style="display:flex;flex-direction:column;justify-content:center;gap:7px;width:52px;height:44px;padding:0;border:0;background:none;cursor:pointer;align-items:flex-end">
+    <span style="display:block;width:38px;height:1px;background:#F5F1EA"></span>
+    <span style="display:block;width:38px;height:1px;background:#F5F1EA"></span>
+    <span style="display:block;width:38px;height:1px;background:#F5F1EA"></span>
+    <span style="display:block;width:38px;height:1px;background:#F5F1EA"></span>
+  </button>
+</header>
+
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <nav aria-label="Main" style="position:fixed;inset:0;z-index:80;background:#14120F;color:#F5F1EA;display:flex;flex-direction:column;padding:clamp(18px,2.6vw,34px) clamp(20px,4vw,56px);animation:tb-fade 320ms ease both">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <img src="uploads/Ivory%20traditions-logo-softwhite-5000.png" alt="" style="height:clamp(42px,4.6vw,64px);width:auto" />
+      <button type="button" aria-label="Close menu" onClick="{{ closeMenu }}" style="width:52px;height:44px;padding:0;border:0;background:none;color:#F5F1EA;cursor:pointer;font-family:'Archivo',sans-serif;font-size:12px;letter-spacing:0.24em;text-transform:uppercase">Close</button>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:clamp(10px,1.6vh,20px);padding:6vh 0">
+      <a href="#top" onClick="{{ closeMenu }}" style="color:#F5F1EA;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(34px,6vw,72px);line-height:1.05" style-hover="color:#C9A98A">Home</a>
+      <a href="#about" onClick="{{ closeMenu }}" style="color:#F5F1EA;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(34px,6vw,72px);line-height:1.05" style-hover="color:#C9A98A">About</a>
+      <a href="#services" onClick="{{ closeMenu }}" style="color:#F5F1EA;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(34px,6vw,72px);line-height:1.05" style-hover="color:#C9A98A">Services</a>
+      <a href="#shop" onClick="{{ closeMenu }}" style="color:#F5F1EA;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(34px,6vw,72px);line-height:1.05" style-hover="color:#C9A98A">The Shop</a>
+      <a href="#contact" onClick="{{ closeMenu }}" style="color:#F5F1EA;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(34px,6vw,72px);line-height:1.05" style-hover="color:#C9A98A">Contact</a>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:clamp(18px,3vw,40px);border-top:1px solid rgba(245,241,234,0.18);padding-top:clamp(18px,3vh,30px)">
+      <a href="https://booksy.com/en-us/60231_traditions-barbershop_barber-shop_16063_sanford#ba_s=seo" target="_blank" rel="noopener" style="color:#14120F;background:#F5F1EA;padding:16px 30px;font-size:13px;letter-spacing:0.26em;text-transform:uppercase" style-hover="background:#C9A98A;color:#14120F">Book Now →</a>
+      <a href="tel:+13215780090" style="color:#F5F1EA;font-size:13px;letter-spacing:0.22em;text-transform:uppercase">321-578-0090</a>
+      <a href="https://www.instagram.com/traditionsbarbershopsanford/" target="_blank" rel="noopener" style="color:#F5F1EA;font-size:13px;letter-spacing:0.22em;text-transform:uppercase">Instagram</a>
+    </div>
+  </nav>
+</sc-if>
+
+<main id="top" style="display:block">
+
+  <section aria-label="Introduction" style="background:#14120F;color:#F5F1EA;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));align-items:end;min-height:100svh">
+    <div style="display:flex;flex-direction:column;justify-content:flex-end;gap:clamp(24px,3vw,40px);padding:clamp(140px,16vh,220px) clamp(20px,4vw,56px) clamp(56px,8vh,96px)">
+      <span style="font-size:11px;letter-spacing:0.34em;text-transform:uppercase;color:#BFA98F">Sanford, Florida</span>
+      <h1 style="font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(40px,5.6vw,84px);line-height:1.02;letter-spacing:-0.015em;max-width:14ch">Rooted in Sanford. Crafted with tradition.</h1>
+      <p style="margin:0;max-width:34ch;font-size:clamp(15px,1.15vw,17px);line-height:1.75;color:rgba(245,241,234,0.82)">Established in 2017. Located in historic downtown Sanford, inside a building first raised in 1926.</p>
+      <a href="https://booksy.com/en-us/60231_traditions-barbershop_barber-shop_16063_sanford#ba_s=seo" target="_blank" rel="noopener" style="align-self:flex-start;color:#14120F;background:#F5F1EA;padding:17px 34px;font-size:13px;letter-spacing:0.26em;text-transform:uppercase" style-hover="background:#C9A98A">Book Now →</a>
+    </div>
+    <div style="position:relative;align-self:stretch;min-height:60svh">
+      <img src="uploads/Inside%20of%20barbershop.jpg" alt="Interior of Traditions Barbershop: red leather barber chairs along an exposed 1926 brick wall in downtown Sanford" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
+    </div>
+  </section>
+
+  <section data-reveal="" style="padding:clamp(90px,16vh,190px) clamp(20px,4vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(32px,6vw,90px);align-items:start;max-width:1440px;margin:0 auto">
+    <p style="margin:0;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(72px,11vw,168px);line-height:0.86;letter-spacing:-0.02em;color:#17150F">1926</p>
+    <div style="display:flex;flex-direction:column;gap:clamp(20px,2.4vw,30px);max-width:52ch">
+      <h2 style="font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(26px,2.8vw,44px);line-height:1.15">A place with history.</h2>
+      <p style="margin:0;font-size:clamp(15px,1.1vw,17px);line-height:1.85;color:#3D372E">The shop works out of a downtown Sanford building put up in 1926 — original brick, high ceilings, good light. We kept what the building already had and added chairs, mirrors, and clippers.</p>
+    </div>
+  </section>
+
+  <section id="about" data-reveal="" style="padding:clamp(70px,12vh,150px) clamp(20px,4vw,56px);max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(32px,6vw,90px)">
+    <span style="font-size:11px;letter-spacing:0.34em;text-transform:uppercase;color:#6E442C">Established 2017</span>
+    <div style="display:flex;flex-direction:column;gap:clamp(22px,2.4vw,32px);max-width:56ch">
+      <h2 style="font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(28px,3.4vw,54px);line-height:1.1">Traditional barbering, done cleanly.</h2>
+      <p style="margin:0;font-size:clamp(15px,1.1vw,17px);line-height:1.85;color:#3D372E">Traditions Barbershop is a local Sanford shop built on traditional barbering and modern professionalism — precise cuts, careful work, an easy room to sit in.</p>
+      <p style="margin:0;font-size:clamp(15px,1.1vw,17px);line-height:1.85;color:#3D372E">Longtime locals, first-time visitors, and everyone in between are welcome.</p>
+    </div>
+  </section>
+
+  <section id="services" data-reveal="" style="padding:clamp(90px,15vh,180px) clamp(20px,4vw,56px);max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(36px,6vw,90px)">
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <span style="font-size:11px;letter-spacing:0.34em;text-transform:uppercase;color:#6E442C">Services</span>
+      <h2 style="font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(28px,3.4vw,54px);line-height:1.1;max-width:20ch">Classic barbering, clean cuts, professional grooming.</h2>
+      <a href="https://booksy.com/en-us/60231_traditions-barbershop_barber-shop_16063_sanford#ba_s=seo" target="_blank" rel="noopener" style="align-self:flex-start;margin-top:14px;font-size:13px;letter-spacing:0.24em;text-transform:uppercase;border-bottom:1px solid #6E442C;padding-bottom:8px">View services &amp; book →</a>
+    </div>
+    <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
+      <li style="border-top:1px solid rgba(23,21,15,0.14);padding:clamp(18px,2.4vw,28px) 0;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(22px,2.2vw,32px)">Haircut</li>
+      <li style="border-top:1px solid rgba(23,21,15,0.14);padding:clamp(18px,2.4vw,28px) 0;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(22px,2.2vw,32px)">Beard</li>
+      <li style="border-top:1px solid rgba(23,21,15,0.14);padding:clamp(18px,2.4vw,28px) 0;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(22px,2.2vw,32px)">Haircut + Beard</li>
+      <li style="border-top:1px solid rgba(23,21,15,0.14);padding:clamp(18px,2.4vw,28px) 0;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(22px,2.2vw,32px)">Shave</li>
+      <li style="border-top:1px solid rgba(23,21,15,0.14);border-bottom:1px solid rgba(23,21,15,0.14);padding:clamp(18px,2.4vw,28px) 0;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(22px,2.2vw,32px);color:#6B6357">And more on Booksy</li>
+    </ul>
+  </section>
+
+  <section id="shop" data-reveal="" aria-label="The shop" style="padding:clamp(40px,8vh,90px) clamp(20px,4vw,56px) clamp(90px,15vh,180px);max-width:1440px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(28px,5vw,72px);align-items:end">
+      <figure style="margin:0;grid-column:span 1">
+        <img src="uploads/IMG_8299.jpg" alt="Barbers cutting hair at Traditions Barbershop in Sanford, Florida" style="width:100%;height:clamp(300px,52vw,620px);object-fit:cover" />
+        <figcaption style="margin-top:16px;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:#6B6357">The floor, mid-afternoon</figcaption>
+      </figure>
+      <figure style="margin:0;max-width:420px;padding-bottom:clamp(0px,6vw,70px)">
+        <img src="uploads/IMG_8298.jpg" alt="Traditions Barber Shop lettering on the front window at 210 Sanford Ave" style="width:100%;height:auto;object-fit:cover" />
+        <figcaption style="margin-top:16px;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:#6B6357">210 Sanford Ave</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section data-reveal="" style="background:#14120F;color:#F5F1EA;padding:clamp(70px,12vh,140px) clamp(20px,4vw,56px);text-align:center">
+    <p style="margin:0 auto;max-width:22ch;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(24px,3vw,44px);line-height:1.2">Walk-ins welcome. Appointments preferred.</p>
+  </section>
+
+  <section data-reveal="" aria-label="Reviews" style="padding:clamp(90px,15vh,170px) clamp(20px,4vw,56px);max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,6vw,90px);align-items:baseline">
+    <h2 style="font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(26px,3vw,44px);line-height:1.15;max-width:18ch">What our clients say</h2>
+    <a href="https://share.google/PNS0OFJ4bnUVWqugn" target="_blank" rel="noopener" style="justify-self:start;font-size:13px;letter-spacing:0.24em;text-transform:uppercase;border-bottom:1px solid #6E442C;padding-bottom:8px">Read our Google reviews →</a>
+  </section>
+
+  <section id="contact" data-reveal="" style="padding:clamp(40px,8vh,90px) clamp(20px,4vw,56px) clamp(80px,13vh,160px);max-width:1440px;margin:0 auto">
+    <h2 style="font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(28px,3.6vw,58px);line-height:1.08;max-width:22ch">Find us in historic downtown Sanford.</h2>
+    <div style="margin-top:clamp(40px,6vw,80px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:clamp(32px,4vw,60px)">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#6E442C">Address</span>
+        <p style="margin:0;font-size:17px;line-height:1.7">210 Sanford Ave<br />Sanford, FL 32771</p>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Traditions+Barbershop+210+Sanford+Ave+Sanford+FL+32771" target="_blank" rel="noopener" style="font-size:12px;letter-spacing:0.24em;text-transform:uppercase">Get directions →</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#6E442C">Contact</span>
+        <a href="tel:+13215780090" style="font-size:17px;color:#17150F">321-578-0090</a>
+        <a href="mailto:traditionsbarbershopsanford@gmail.com" style="font-size:15px;color:#17150F;word-break:break-word">traditionsbarbershopsanford@gmail.com</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#6E442C">Hours</span>
+        <p style="margin:0;font-size:16px;line-height:1.9;color:#3D372E">Tue–Fri&nbsp;&nbsp;9AM–6PM<br />Sat&nbsp;&nbsp;9AM–2PM<br />Sun–Mon&nbsp;&nbsp;Closed</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#6E442C">Follow along</span>
+        <a href="https://www.instagram.com/traditionsbarbershopsanford/" target="_blank" rel="noopener" style="font-size:15px;color:#17150F">@traditionsbarbershopsanford</a>
+        <a href="https://www.facebook.com/p/Traditions-Barbershop-100054428742990/" target="_blank" rel="noopener" style="font-size:12px;letter-spacing:0.24em;text-transform:uppercase">Facebook →</a>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal="" aria-label="Book an appointment" style="background:#14120F;color:#F5F1EA;padding:clamp(100px,18vh,220px) clamp(20px,4vw,56px);display:flex;flex-direction:column;align-items:center;gap:clamp(28px,4vw,48px);text-align:center">
+    <h2 style="font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(32px,5vw,76px);line-height:1.05;max-width:18ch">Ready for your next cut?</h2>
+    <a href="https://booksy.com/en-us/60231_traditions-barbershop_barber-shop_16063_sanford#ba_s=seo" target="_blank" rel="noopener" style="color:#14120F;background:#F5F1EA;padding:18px 38px;font-size:13px;letter-spacing:0.26em;text-transform:uppercase" style-hover="background:#C9A98A">Book your appointment →</a>
+    <p style="margin:0;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(245,241,234,0.7)">Walk-ins welcome. Appointments preferred.</p>
+  </section>
+
+</main>
+
+<footer style="background:#14120F;color:#F5F1EA;border-top:1px solid rgba(245,241,234,0.14);padding:clamp(56px,9vh,110px) clamp(20px,4vw,56px) clamp(30px,4vh,50px)">
+  <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:clamp(32px,4vw,60px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <img src="uploads/Ivory%20traditions-logo-softwhite-5000.png" alt="Traditions Barbershop" style="height:72px;width:auto" />
+      <span style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(245,241,234,0.7)">Traditions Barbershop</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.7">
+      <p style="margin:0;color:rgba(245,241,234,0.82)">210 Sanford Ave<br />Sanford, FL 32771</p>
+      <a href="tel:+13215780090" style="color:#F5F1EA">321-578-0090</a>
+      <a href="mailto:traditionsbarbershopsanford@gmail.com" style="color:#F5F1EA;font-size:14px;word-break:break-word">traditionsbarbershopsanford@gmail.com</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;font-size:12px;letter-spacing:0.22em;text-transform:uppercase">
+      <a href="https://www.instagram.com/traditionsbarbershopsanford/" target="_blank" rel="noopener" style="color:#F5F1EA">Instagram</a>
+      <a href="https://www.facebook.com/p/Traditions-Barbershop-100054428742990/" target="_blank" rel="noopener" style="color:#F5F1EA">Facebook</a>
+      <a href="https://booksy.com/en-us/60231_traditions-barbershop_barber-shop_16063_sanford#ba_s=seo" target="_blank" rel="noopener" style="color:#F5F1EA">Book Now</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(245,241,234,0.6)">Hours</span>
+      <p style="margin:0;font-size:15px;line-height:1.9;color:rgba(245,241,234,0.82)">Tue–Fri&nbsp;&nbsp;9AM–6PM<br />Sat&nbsp;&nbsp;9AM–2PM<br />Sun–Mon&nbsp;&nbsp;Closed</p>
+    </div>
+  </div>
+  <p style="max-width:1440px;margin:clamp(48px,8vh,90px) auto 0;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(245,241,234,0.45)">© 2026 Traditions Barbershop · Sanford, Florida</p>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { menuOpen: false };
+  headerRef = React.createRef();
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const h = this.headerRef.current;
+      if (!h) return;
+      const past = window.scrollY > 60;
+      h.style.background = past ? 'rgba(20,18,15,0.94)' : 'transparent';
+      h.style.paddingTop = past ? '14px' : '';
+      h.style.paddingBottom = past ? '14px' : '';
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+    this.onKey = (e) => { if (e.key === 'Escape') this.setState({ menuOpen: false }); };
+    window.addEventListener('keydown', this.onKey);
+
+    if ('IntersectionObserver' in window) {
+      this.io = new IntersectionObserver((entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) {
+            en.target.style.opacity = '1';
+            en.target.style.transform = 'none';
+            this.io.unobserve(en.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+      document.querySelectorAll('[data-reveal]').forEach((el) => {
+        el.style.transition = 'opacity 900ms ease, transform 900ms ease';
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(18px)';
+        this.io.observe(el);
+      });
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('keydown', this.onKey);
+    if (this.io) this.io.disconnect();
+  }
+
+  componentDidUpdate() {
+    document.body.style.overflow = this.state.menuOpen ? 'hidden' : '';
+    const btn = document.querySelector('header button[aria-expanded]');
+    if (btn) btn.setAttribute('aria-expanded', String(this.state.menuOpen));
+  }
+
+  renderVals() {
+    return {
+      menuOpen: this.state.menuOpen,
+      headerRef: this.headerRef,
+      openMenu: () => this.setState({ menuOpen: true }),
+      closeMenu: () => this.setState({ menuOpen: false })
+    };
+  }
+}
+
+</script>
+</body>
+</html>

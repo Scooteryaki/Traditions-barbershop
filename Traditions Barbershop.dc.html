@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Traditions Barbershop | Barber Shop in Historic Downtown Sanford, FL</title>
+<meta name="description" content="Traditions Barbershop is a barber shop in historic downtown Sanford, Florida. Classic barbering, clean cuts, professional grooming. 210 Sanford Ave. Walk-ins welcome, appointments preferred." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/png" href="uploads/traditions-logo.png" />
+<link rel="apple-touch-icon" href="uploads/traditions-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{margin:0;background:#1A1714;color:#EFE7DA;font-family:'Archivo',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:#C9A98A;text-decoration:none}
+  a:hover{color:#FFF6E8}
+  a:focus-visible,button:focus-visible{outline:1px solid #C9A98A;outline-offset:6px}
+  h1,h2,h3{margin:0;font-weight:400}
+  p{text-wrap:pretty}
+  @keyframes tb-fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  /* animated nav underline — needs :hover + ::after, not expressible inline */
+  .tb-nav a{position:relative;color:#F5F1EA}
+  .tb-nav a:hover{color:#F5F1EA}
+  .tb-nav a::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:1px;background:#C9A98A;transform:scaleX(0);transform-origin:left;transition:transform 420ms cubic-bezier(.22,.61,.36,1)}
+  .tb-nav a:hover::after,.tb-nav a:focus-visible::after{transform:scaleX(1)}
+  .tb-book{transition:background 320ms ease,color 320ms ease}
+  .tb-book:hover,.tb-book:focus-visible{background:#C9A98A !important;color:#14120F !important}
+  @media (max-width:820px){.tb-links{display:none !important}.tb-burger{display:flex !important}}
+  @media (min-width:821px){.tb-about-copy{margin-top:0}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BarberShop","name":"Traditions Barbershop","address":{"@type":"PostalAddress","streetAddress":"210 Sanford Ave","addressLocality":"Sanford","addressRegion":"FL","postalCode":"32771","addressCountry":"US"},"telephone":"+1-321-578-0090","email":"traditionsbarbershopsanford@gmail.com","foundingDate":"2017","priceRange":"$$","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}],"sameAs":["https://www.instagram.com/traditionsbarbershopsanford/","https://www.facebook.com/p/Traditions-Barbershop-100054428742990/"],"potentialAction":{"@type":"ReserveAction","target":{"@type":"EntryPoint","urlTemplate":"https://booksy.com/en-us/60231_traditions-barbershop_barber-shop_16063_sanford#ba_s=seo"}}}
+</script>
+</helmet>
+
+<sc-if value="{{ isFrame }}" hint-placeholder-val="{{ true }}">
+<header ref="{{ headerRef }}" style="position:fixed;top:0;left:0;right:0;z-index:60;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px clamp(20px,4vw,48px);padding:clamp(14px,2.2vw,28px) clamp(20px,4vw,56px);transition:background 500ms ease,padding 400ms ease;backdrop-filter:blur(6px)">
+  <a href="#top" aria-label="Traditions Barbershop home" style="display:block;flex:0 0 auto">
+    <img src="uploads/traditions-logo.png" alt="Traditions Barbershop logo" style="height:clamp(38px,4.2vw,58px);width:auto" />
+  </a>
+  <nav class="tb-nav" aria-label="Main" style="display:flex;align-items:center;gap:clamp(18px,2.6vw,38px);font-size:12px;letter-spacing:0.24em;text-transform:uppercase">
+    <span class="tb-links" style="display:flex;align-items:center;gap:clamp(18px,2.6vw,38px)">
+      <a href="#top">Home</a>
+      <a href="#about">About</a>
+      <a href="#barbers">Barbers</a>
+      <a href="#services">Services</a>
+      <a href="#shop">The Shop</a>
+      <a href="#contact">Contact</a>
+    </span>
+    <a class="tb-book" href="https://booksy.com/en-us/60231_traditions-barbershop_barber-shop_16063_sanford#ba_s=seo" target="_blank" rel="noopener" style="background:#F5F1EA;color:#14120F;padding:12px 22px;transition:background 300ms ease,color 300ms ease">Book Now</a>
+    <button class="tb-burger" type="button" aria-label="Open menu" onClick="{{ openMenu }}" style="display:none;flex-direction:column;justify-content:center;align-items:flex-end;gap:6px;width:44px;height:44px;padding:0;border:0;background:none;cursor:pointer">
+      <span style="display:block;width:26px;height:1px;background:#F5F1EA"></span>
+      <span style="display:block;width:26px;height:1px;background:#F5F1EA"></span>
+      <span style="display:block;width:26px;height:1px;background:#F5F1EA"></span>
+    </button>
+  </nav>
+</header>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#2B201A"></rect><text x="50" y="60" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#F5F1EA">TB</text></svg></template>
+
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;inset:0;z-index:80;background:#14120F;color:#F5F1EA;display:flex;flex-direction:column;padding:clamp(18px,2.6vw,34px) clamp(20px,5vw,48px);animation:tb-fade 300ms ease both">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:20px">
+      <img src="uploads/traditions-logo.png" alt="" style="height:46px;width:auto;object-fit:contain" />
+      <button type="button" aria-label="Close menu" onClick="{{ closeMenu }}" style="width:52px;height:44px;padding:0;border:0;background:none;color:#F5F1EA;cursor:pointer;font-family:'Archivo',sans-serif;font-size:11px;letter-spacing:0.24em;text-transform:uppercase">Close</button>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:clamp(10px,2vh,18px)">
+      <a href="#top" onClick="{{ closeMenu }}" style="color:#F5F1EA;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(32px,9vw,48px);line-height:1.1">Home</a>
+      <a href="#about" onClick="{{ closeMenu }}" style="color:#F5F1EA;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(32px,9vw,48px);line-height:1.1">About</a>
+      <a href="#barbers" onClick="{{ closeMenu }}" style="color:#F5F1EA;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(32px,9vw,48px);line-height:1.1">Barbers</a>
+      <a href="#services" onClick="{{ closeMenu }}" style="color:#F5F1EA;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(32px,9vw,48px);line-height:1.1">Services</a>
+      <a href="#contact" onClick="{{ closeMenu }}" style="color:#F5F1EA;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(32px,9vw,48px);line-height:1.1">Contact</a>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px 28px;border-top:1px solid rgba(245,241,234,0.18);padding-top:22px">
+      <a class="tb-book" href="https://booksy.com/en-us/60231_traditions-barbershop_barber-shop_16063_sanford#ba_s=seo" target="_blank" rel="noopener" style="color:#14120F;background:#F5F1EA;padding:15px 28px;font-size:12px;letter-spacing:0.26em;text-transform:uppercase">Book Now →</a>
+      <a href="tel:+13215780090" style="color:#F5F1EA;font-size:12px;letter-spacing:0.22em;text-transform:uppercase">321-578-0090</a>
+    </div>
+  </div>
+</sc-if>
+
+<main id="top" style="display:block">
+
+  <section aria-label="Introduction" style="position:relative;background:#14120F;color:#F5F1EA;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:clamp(132px,18vh,220px) clamp(20px,5vw,64px) clamp(48px,7vh,92px);overflow:hidden">
+    <img src="uploads/shop-interior.jpg" alt="Interior of Traditions Barbershop: red leather barber chairs along an exposed brick wall in downtown Sanford" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.72" />
+    <div style="position:absolute;inset:0;background:rgba(20,18,15,0.52)"></div>
+    <div style="position:relative;display:flex;flex-direction:column;align-items:center;gap:clamp(16px,2.1vw,28px);max-width:900px">
+      <img src="uploads/traditions-logo.png" alt="Traditions Barbershop logo" style="width:min(66%,330px);height:auto;object-fit:contain" />
+      <span style="font-size:11px;letter-spacing:0.36em;text-transform:uppercase;color:#F5F1EA">Sanford, Florida · Est. 2017</span>
+      <h1 style="font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(36px,5vw,74px);line-height:1.05;letter-spacing:-0.015em;max-width:20ch;text-wrap:balance">A sharp cut, every time you&nbsp;sit&nbsp;down.</h1>
+      <p style="margin:0;max-width:44ch;font-size:clamp(15px,1.15vw,17px);line-height:1.8;color:#F5F1EA">Classic barbering in historic downtown Sanford. Walk in, or book the chair and the barber you want.</p>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(16px,2.4vw,32px);margin-top:clamp(4px,1vw,12px)">
+        <a class="tb-book" href="https://booksy.com/en-us/60231_traditions-barbershop_barber-shop_16063_sanford#ba_s=seo" target="_blank" rel="noopener" style="color:#14120F;background:#F5F1EA;padding:17px 34px;font-size:13px;letter-spacing:0.26em;text-transform:uppercase;transition:background 300ms ease">Book Now →</a>
+        <a href="tel:+13215780090" style="color:#F5F1EA;font-size:12px;letter-spacing:0.24em;text-transform:uppercase;border-bottom:1px solid rgba(245,241,234,0.35);padding-bottom:6px">Call 321-578-0090</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" data-reveal="" style="padding:clamp(80px,14vh,170px) clamp(20px,4vw,56px) clamp(60px,10vh,120px);max-width:1440px;margin:0 auto">
+    <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;margin-bottom:clamp(44px,7vw,90px)">
+      <span style="font-size:clamp(13px,1.05vw,15px);letter-spacing:0.3em;text-transform:uppercase;color:#C9A98A;line-height:1.2">Established 2017</span>
+      <span style="font-size:clamp(13px,1.05vw,15px);letter-spacing:0.3em;text-transform:uppercase;color:#9A8F7F;line-height:1.2">In a building from 1926</span>
+    </div>
+    <div id="shop" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(36px,6vw,90px);align-items:start">
+      <div style="display:flex;flex-direction:column;gap:clamp(32px,4vw,56px)">
+        <figure style="margin:0;width:100%">
+          <img src="uploads/IMG_8298.jpg" alt="Traditions Barber Shop lettering on the front window at 210 Sanford Ave" style="width:100%;height:clamp(360px,44vw,720px);object-fit:cover" />
+        </figure>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <h2 style="font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(20px,2vw,30px);line-height:1.2;color:#9A8F7F;max-width:26ch">Find us in historic downtown Sanford.</h2>
+          <p style="margin:0;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:#9A8F7F;line-height:2">210 Sanford Ave<br />Sanford, FL 32771</p>
+        </div>
+      </div>
+      <div class="tb-about-copy" style="display:flex;flex-direction:column;gap:clamp(32px,4vw,56px)">
+        <div style="display:flex;flex-direction:column;gap:clamp(22px,2.4vw,32px);max-width:56ch">
+          <p style="margin:0;font-size:clamp(15px,1.1vw,17px);line-height:1.85;color:#9A8F7F">Traditions sits on Sanford Ave in the middle of the historic downtown district, in a storefront that has been standing since 1926. The brick walls and high ceilings came with the building, and we left them alone. The shop is a short walk from the shops and restaurants on First Street, so it is easy to make a cut part of an afternoon downtown.</p>
+          <p style="margin:0;font-size:clamp(15px,1.1vw,17px);line-height:1.85;color:#9A8F7F">Alongside haircuts, our barbers handle beard trims and shaping, straight razor line-ups, and hot towel shaves. Every cut starts with a conversation about what you want. Bring a photo, bring an idea, or bring nothing at all and your barber will recommend something that suits you.</p>
+        </div>
+        <figure style="margin:0">
+          <img src="uploads/IMG_8299.jpg" alt="Barbers cutting hair at Traditions Barbershop in Sanford, Florida" style="width:100%;height:clamp(280px,34vw,460px);object-fit:cover" />
+          <figcaption style="margin-top:18px;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(20px,2vw,30px);line-height:1.2;color:#9A8F7F;max-width:26ch">Brick from 1926, chairs from today.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="barbers" data-reveal="" style="padding:clamp(70px,12vh,150px) clamp(20px,4vw,56px);max-width:1440px;margin:0 auto">
+    <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:20px clamp(24px,4vw,60px)">
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <span style="font-size:11px;letter-spacing:0.34em;text-transform:uppercase;color:#C9A98A">The Barbers</span>
+        <h2 style="font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(28px,3.4vw,54px);line-height:1.1;max-width:22ch">The people behind the chairs.</h2>
+      </div>
+      <a href="https://booksy.com/en-us/60231_traditions-barbershop_barber-shop_16063_sanford#ba_s=seo" target="_blank" rel="noopener" style="font-size:12px;letter-spacing:0.24em;text-transform:uppercase;border-bottom:1px solid #C9A98A;padding-bottom:8px">Book with your barber →</a>
+    </div>
+    <div style="margin-top:clamp(40px,6vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,3.4vw,52px)">
+      <figure style="margin:0;display:flex;flex-direction:column;gap:18px">
+        <div role="img" aria-label="Placeholder for barber headshot" style="aspect-ratio:4/5;width:100%;background-color:#2A2420;background-image:repeating-linear-gradient(135deg,rgba(239,231,218,0.07) 0 8px,transparent 8px 16px);display:flex;align-items:flex-end;padding:16px"><span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.08em;color:#9A8F7F">headshot: barber 01</span></div>
+        <figcaption style="display:flex;flex-direction:column;gap:8px">
+          <span style="font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(20px,1.8vw,26px);color:#EFE7DA">Barber Name</span>
+          <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.06em;color:#9A8F7F">short blurb: years behind the chair, specialty, what he's known for</span>
+        </figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:18px">
+        <div role="img" aria-label="Placeholder for barber headshot" style="aspect-ratio:4/5;width:100%;background-color:#2A2420;background-image:repeating-linear-gradient(135deg,rgba(239,231,218,0.07) 0 8px,transparent 8px 16px);display:flex;align-items:flex-end;padding:16px"><span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.08em;color:#9A8F7F">headshot: barber 02</span></div>
+        <figcaption style="display:flex;flex-direction:column;gap:8px">
+          <span style="font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(20px,1.8vw,26px);color:#EFE7DA">Barber Name</span>
+          <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.06em;color:#9A8F7F">short blurb: years behind the chair, specialty, what he's known for</span>
+        </figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:18px">
+        <div role="img" aria-label="Placeholder for barber headshot" style="aspect-ratio:4/5;width:100%;background-color:#2A2420;background-image:repeating-linear-gradient(135deg,rgba(239,231,218,0.07) 0 8px,transparent 8px 16px);display:flex;align-items:flex-end;padding:16px"><span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.08em;color:#9A8F7F">headshot: barber 03</span></div>
+        <figcaption style="display:flex;flex-direction:column;gap:8px">
+          <span style="font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(20px,1.8vw,26px);color:#EFE7DA">Barber Name</span>
+          <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.06em;color:#9A8F7F">short blurb: years behind the chair, specialty, what he's known for</span>
+        </figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:18px">
+        <div role="img" aria-label="Placeholder for barber headshot" style="aspect-ratio:4/5;width:100%;background-color:#2A2420;background-image:repeating-linear-gradient(135deg,rgba(239,231,218,0.07) 0 8px,transparent 8px 16px);display:flex;align-items:flex-end;padding:16px"><span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.08em;color:#9A8F7F">headshot: barber 04</span></div>
+        <figcaption style="display:flex;flex-direction:column;gap:8px">
+          <span style="font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(20px,1.8vw,26px);color:#EFE7DA">Barber Name</span>
+          <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.06em;color:#9A8F7F">short blurb: years behind the chair, specialty, what he's known for</span>
+        </figcaption>
+      </figure>
+    </div>
+    <p style="margin:clamp(28px,4vh,44px) 0 0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.06em;color:#9A8F7F">Placeholders: drop in real headshots and names when ready.</p>
+  </section>
+
+  <section id="services" data-reveal="" style="padding:clamp(60px,10vh,130px) clamp(20px,4vw,56px);max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(36px,6vw,90px)">
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <span style="font-size:11px;letter-spacing:0.34em;text-transform:uppercase;color:#C9A98A">Services</span>
+      <h2 style="font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(28px,3.4vw,54px);line-height:1.1;max-width:20ch">Classic barbering, clean cuts, professional grooming.</h2>
+      <a href="https://booksy.com/en-us/60231_traditions-barbershop_barber-shop_16063_sanford#ba_s=seo" target="_blank" rel="noopener" style="align-self:flex-start;margin-top:14px;font-size:13px;letter-spacing:0.24em;text-transform:uppercase;border-bottom:1px solid #C9A98A;padding-bottom:8px">View services &amp; book →</a>
+    </div>
+    <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
+      <li style="border-top:1px solid rgba(239,231,218,0.16);padding:clamp(18px,2.4vw,28px) 0;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(22px,2.2vw,32px)">Haircut</li>
+      <li style="border-top:1px solid rgba(239,231,218,0.16);padding:clamp(18px,2.4vw,28px) 0;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(22px,2.2vw,32px)">Beard</li>
+      <li style="border-top:1px solid rgba(239,231,218,0.16);padding:clamp(18px,2.4vw,28px) 0;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(22px,2.2vw,32px)">Haircut + Beard</li>
+      <li style="border-top:1px solid rgba(239,231,218,0.16);padding:clamp(18px,2.4vw,28px) 0;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(22px,2.2vw,32px)">Shave</li>
+      <li style="border-top:1px solid rgba(239,231,218,0.16);border-bottom:1px solid rgba(239,231,218,0.16);padding:clamp(18px,2.4vw,28px) 0;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(22px,2.2vw,32px);color:#9A8F7F">And more on Booksy</li>
+    </ul>
+  </section>
+
+  <section data-reveal="" style="background:#2B201A;color:#F5F1EA;padding:clamp(60px,10vh,120px) clamp(20px,4vw,56px);text-align:center">
+    <p style="margin:0 auto;max-width:22ch;font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(24px,3vw,44px);line-height:1.25">Walk-ins welcome.<br />Appointments preferred.</p>
+  </section>
+
+  <section data-reveal="" aria-label="Reviews" style="padding:clamp(80px,13vh,150px) clamp(20px,4vw,56px);max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,6vw,90px);align-items:baseline">
+    <h2 style="font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(26px,3vw,44px);line-height:1.15;max-width:18ch">What our clients say</h2>
+    <a href="https://share.google/PNS0OFJ4bnUVWqugn" target="_blank" rel="noopener" style="justify-self:start;font-size:13px;letter-spacing:0.24em;text-transform:uppercase;border-bottom:1px solid #C9A98A;padding-bottom:8px">Read our Google reviews →</a>
+  </section>
+
+  <section data-reveal="" aria-label="Book an appointment" style="background:#2B201A;color:#F5F1EA;padding:clamp(100px,18vh,220px) clamp(20px,4vw,56px);display:flex;flex-direction:column;align-items:center;gap:clamp(28px,4vw,48px);text-align:center">
+    <h2 style="font-family:'Libre Caslon Display',Georgia,serif;font-size:clamp(32px,5vw,76px);line-height:1.05;max-width:18ch">Ready for your next cut?</h2>
+    <a class="tb-book" href="https://booksy.com/en-us/60231_traditions-barbershop_barber-shop_16063_sanford#ba_s=seo" target="_blank" rel="noopener" style="color:#14120F;background:#F5F1EA;padding:18px 38px;font-size:13px;letter-spacing:0.26em;text-transform:uppercase;transition:background 300ms ease">Book your appointment →</a>
+    <p style="margin:0;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(245,241,234,0.7)">Walk-ins welcome. Appointments preferred.</p>
+  </section>
+
+</main>
+
+<footer id="contact" style="background:#14120F;color:#F5F1EA;border-top:1px solid rgba(245,241,234,0.14);padding:clamp(56px,9vh,110px) clamp(20px,4vw,56px) clamp(30px,4vh,50px)">
+  <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:clamp(32px,4vw,60px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <img src="uploads/traditions-logo.png" alt="Traditions Barbershop" style="height:72px;width:auto;align-self:flex-start;object-fit:contain" />
+      <span style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(245,241,234,0.7)">Traditions Barbershop</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.7">
+      <p style="margin:0;color:rgba(245,241,234,0.82)">210 Sanford Ave<br />Sanford, FL 32771</p>
+      <a href="tel:+13215780090" style="color:#F5F1EA">321-578-0090</a>
+      <a href="mailto:traditionsbarbershopsanford@gmail.com" style="color:#F5F1EA;font-size:14px;word-break:break-word">traditionsbarbershopsanford@gmail.com</a>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Traditions+Barbershop+210+Sanford+Ave+Sanford+FL+32771" target="_blank" rel="noopener" style="color:#F5F1EA;font-size:12px;letter-spacing:0.24em;text-transform:uppercase">Get directions →</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;order:2">
+      <a href="https://www.instagram.com/traditionsbarbershopsanford/" target="_blank" rel="noopener" style="color:#F5F1EA">Instagram</a>
+      <a href="https://www.facebook.com/p/Traditions-Barbershop-100054428742990/" target="_blank" rel="noopener" style="color:#F5F1EA">Facebook</a>
+      <a href="https://booksy.com/en-us/60231_traditions-barbershop_barber-shop_16063_sanford#ba_s=seo" target="_blank" rel="noopener" style="color:#F5F1EA">Book Now</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;order:1">
+      <a href="#about" style="color:rgba(245,241,234,0.66)">About</a>
+      <a href="#barbers" style="color:rgba(245,241,234,0.66)">Barbers</a>
+      <a href="#services" style="color:rgba(245,241,234,0.66)">Services</a>
+      <a href="#contact" style="color:rgba(245,241,234,0.66)">Contact</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(245,241,234,0.6)">Hours</span>
+      <p style="margin:0;font-size:15px;line-height:1.9;color:rgba(245,241,234,0.82)">Tue–Fri&nbsp;&nbsp;9AM–6PM<br />Sat&nbsp;&nbsp;9AM–2PM<br />Sun–Mon&nbsp;&nbsp;Closed</p>
+    </div>
+  </div>
+  <p style="max-width:1440px;margin:clamp(48px,8vh,90px) auto 0;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(245,241,234,0.45)">© 2026 Traditions Barbershop · Sanford, Florida</p>
+</footer>
+
+</sc-if>
+
+<sc-if value="{{ isShell }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;inset:0;background:#0E0C0A;display:flex;align-items:center;justify-content:center;overflow:hidden">
+    <div ref="{{ stageRef }}" style="position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:0">
+      <iframe ref="{{ frameRef }}" title="Traditions Barbershop preview" src="?view=frame" style="border:0;background:#1A1714;display:block;flex:0 0 auto;transform-origin:center center"></iframe>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ showPill }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:95;display:flex;gap:4px;padding:4px;border:1px solid rgba(239,231,218,0.22);border-radius:999px;background:rgba(20,18,15,0.92);backdrop-filter:blur(8px)">
+    <button type="button" ref="{{ webBtnRef }}" onClick="{{ showWeb }}" style="border:0;background:#F5F1EA;color:#14120F;border-radius:999px;padding:9px 20px;font-family:'Archivo',sans-serif;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;cursor:pointer">Web</button>
+    <button type="button" ref="{{ mobileBtnRef }}" onClick="{{ showMobile }}" style="border:0;background:transparent;color:#EFE7DA;border-radius:999px;padding:9px 20px;font-family:'Archivo',sans-serif;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;cursor:pointer">Mobile</button>
+  </div>
+</sc-if>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  headerRef = React.createRef();
+  stageRef = React.createRef();
+  frameRef = React.createRef();
+  webBtnRef = React.createRef();
+  mobileBtnRef = React.createRef();
+  state = { mode: 'web', menuOpen: false };
+
+  isFrameView() {
+    try { return new URLSearchParams(window.location.search).get('view') === 'frame'; }
+    catch (e) { return false; }
+  }
+
+  fitFrame() {
+    const stage = this.stageRef.current, frame = this.frameRef.current;
+    if (!stage || !frame) return;
+    const sw = stage.clientWidth, sh = stage.clientHeight;
+    if (this.state.mode === 'mobile') {
+      const h = Math.min(844, sh - 40);
+      frame.style.width = '390px';
+      frame.style.height = h + 'px';
+      frame.style.borderRadius = '26px';
+      frame.style.boxShadow = '0 24px 60px rgba(0,0,0,0.5)';
+      const s = Math.min(1, (sw - 40) / 390);
+      frame.style.transform = 'scale(' + s + ')';
+    } else {
+      const dw = 1440;
+      const s = Math.min(1, sw / dw);
+      frame.style.width = dw + 'px';
+      frame.style.height = Math.round(sh / s) + 'px';
+      frame.style.borderRadius = '0px';
+      frame.style.boxShadow = 'none';
+      frame.style.transform = 'scale(' + s + ')';
+    }
+  }
+
+  syncPill() {
+    const web = this.webBtnRef.current, mob = this.mobileBtnRef.current;
+    if (!web || !mob) return;
+    const m = this.state.mode === 'mobile';
+    web.style.background = m ? 'transparent' : '#F5F1EA';
+    web.style.color = m ? '#EFE7DA' : '#14120F';
+    mob.style.background = m ? '#F5F1EA' : 'transparent';
+    mob.style.color = m ? '#14120F' : '#EFE7DA';
+  }
+
+  componentDidMount() {
+    if (!this.isFrameView()) {
+      this.onResize = () => this.fitFrame();
+      window.addEventListener('resize', this.onResize);
+      this.syncPill();
+      setTimeout(() => { this.syncPill(); this.fitFrame(); }, 60);
+    }
+    this.onScroll = () => {
+      const h = this.headerRef.current;
+      if (!h) return;
+      h.style.background = window.scrollY > 60 ? 'rgba(20,18,15,0.94)' : 'transparent';
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+
+    if ('IntersectionObserver' in window) {
+      this.io = new IntersectionObserver((entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) {
+            en.target.style.opacity = '1';
+            en.target.style.transform = 'none';
+            this.io.unobserve(en.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+      document.querySelectorAll('[data-reveal]').forEach((el) => {
+        el.style.transition = 'opacity 900ms ease, transform 900ms ease';
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(18px)';
+        this.io.observe(el);
+      });
+    }
+  }
+
+  componentDidUpdate() { this.syncPill(); this.fitFrame(); }
+
+  componentWillUnmount() {
+    if (this.onScroll) window.removeEventListener('scroll', this.onScroll);
+    if (this.onResize) window.removeEventListener('resize', this.onResize);
+    if (this.io) this.io.disconnect();
+  }
+
+  renderVals() {
+    const frame = this.isFrameView();
+    return {
+      headerRef: this.headerRef,
+      stageRef: this.stageRef,
+      frameRef: this.frameRef,
+      webBtnRef: this.webBtnRef,
+      mobileBtnRef: this.mobileBtnRef,
+      isFrame: frame || this.state.mode === 'web',
+      isShell: !frame && this.state.mode === 'mobile',
+      showPill: !frame,
+      menuOpen: this.state.menuOpen,
+      openMenu: () => this.setState({ menuOpen: true }),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      showWeb: () => this.setState({ mode: 'web' }),
+      showMobile: () => this.setState({ mode: 'mobile' })
+    };
+  }
+}
+
+</script>
+</body>
+</html>
